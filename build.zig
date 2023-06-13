@@ -6,11 +6,23 @@ const Program = struct {
     has_test: bool,
 };
 
-const program_list = [_]Program{.{
-    .name = "hello-window",
-    .description = "a resizeable window that is all ways blue",
-    .has_test = false,
-}};
+const program_list = [_]Program{
+    .{
+        .name = "hello-window",
+        .description = "a resizeable window that is all ways blue",
+        .has_test = false,
+    },
+    .{
+        .name = "hello-triangle",
+        .description = "display a tringle created with virtex and fragment shaders",
+        .has_test = false,
+    },
+    .{
+        .name = "hello-rectangle",
+        .description = "display a rectangle created with ellement array buffer",
+        .has_test = false,
+    },
+};
 
 pub fn build(b: *std.Build) void {
     const target = b.standardTargetOptions(.{});

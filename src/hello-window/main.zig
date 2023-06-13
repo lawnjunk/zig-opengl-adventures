@@ -34,11 +34,11 @@ pub fn main() !void {
     c.glViewport(0, 0, 800, 600);
     _ = c.glfwSetFramebufferSizeCallback(window, resizeCallback);
 
-    c.glClearColor(0.1, 0.3, 0.9, 0.0);
-
     info("press q to quit\n", .{});
     while (c.glfwWindowShouldClose(window) != 1) {
+        c.glClearColor(0.1, 0.3, 0.9, 0.0);
         c.glClear(c.GL_COLOR_BUFFER_BIT);
+
         if (c.glfwGetKey(window, c.GLFW_KEY_Q) == c.GLFW_PRESS) {
             info("byebye\n", .{});
             _ = c.glfwSetWindowShouldClose(window, c.GLFW_TRUE);
