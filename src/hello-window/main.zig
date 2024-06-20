@@ -22,7 +22,7 @@ pub fn main() !void {
     c.glfwWindowHint(c.GLFW_OPENGL_PROFILE, c.GLFW_OPENGL_CORE_PROFILE);
     c.glfwWindowHint(c.GLFW_OPENGL_FORWARD_COMPAT, c.GL_TRUE);
 
-    const maby_window = c.glfwCreateWindow(800, 600, "Learnin Open GL!", null, null);
+    const maby_window = c.glfwCreateWindow(1800, 600, "Learnin Open GL!", null, null);
     if (maby_window == null) {
         return error.GlfwCreateWindowError;
     }
